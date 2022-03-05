@@ -1,0 +1,44 @@
+/* Power Menu Style */
+
+@import "colors.rasi"
+
+configuration{
+	hover-select:           true;
+	me-accept-entry: 		[MousePrimary,MouseDPrimary,MouseSecondary];
+	me-select-entry: 		"";
+}
+* {
+	font:					@font-main;
+	background-color:		@background; 
+}
+window{
+	width:					450px;
+	height:					380px;
+	location:				center;
+	border:					4px;
+	border-color:			@yellow;
+	border-radius:			8px;
+}
+prompt {
+	background-color: 		@yellow;
+	text-color:				@black;
+	padding:				8px 0px 8px 0px;
+}
+inputbar {
+	children: 				[ prompt ];
+	background-color: 		@yellow;
+	padding:				0px 0px 0px 35px;
+}
+listview {
+	spacing:				16px;
+	padding:				15px 20px 0px 20px;
+}
+element-text selected {
+	background-color:		@yellow;
+	text-color:				@black;
+	border-radius:			8px;
+}
+element-text {
+	text-color:				@foreground;
+	padding:				5px 0px 5px 15px;		
+}

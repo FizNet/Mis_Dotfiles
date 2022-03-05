@@ -1,0 +1,68 @@
+/* Estilo del Menu de Apagado */
+
+@import "colors.rasi"
+
+configuration {
+	disable-history: false;
+	fullscreen: false;
+	sidebar-mode: false;
+	hide-scrollbar: true;
+	disable-history: true;
+    hover-select: true;
+    me-accept-entry: "MousePrimary";
+    me-select-entry: "";
+}
+
+* {
+ 	font: @font-main;
+ 	//background: @background;
+ 	background-color: @background;
+}
+
+window {
+	background-color: @background;
+	width: 100%;
+	height: 100%;
+	padding: 35% 10% 5% 10%;
+}
+
+prompt {
+    enabled: 						true;
+	border-radius: 8px;
+	background-color: 				@orange;
+	text-color: 					@black-alt;
+    padding:                        10px 10px 10px 10px;
+    font: @font-alt;
+}
+inputbar {
+	children: 						[ prompt ];
+    background-color:               @background;
+    text-color:                     @foreground;
+    expand:                         false;
+    padding:                        0% 30% 0 11%;
+}
+listview {
+	padding:                        8% 00% 0% 10.5%;
+    //margin:                         10% 0% 0% 0%;
+    spacing:                        100px;
+    cycle:                          true;
+    dynamic:                        true;
+    layout:                         horizontal;
+}
+element-text{
+	background-color: @background;
+	text-color: @foreground;
+	margin: 0px 40px 0px 0px;
+	font: "LiterationMono Nerd Font 80";
+}
+element {
+	background-color: @background;
+	padding: 0px 0px 0px 10px;
+}
+element selected {
+	background-color: @background;
+}
+element-text.selected{
+	background-color: @background;
+	text-color: @orange;
+}

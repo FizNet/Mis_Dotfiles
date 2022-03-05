@@ -1,0 +1,25 @@
+#!/bin/sh
+path="$HOME/.config/rofi/launchers"
+run_menu='run_menu'
+apps_menu='apps_menu'
+power_menu='power_menu'
+ss_menu='ss_menu'
+main_menu='main_menu'
+option=$1
+case $option in
+	$main_menu)
+		$path/main-menu.sh
+	;;
+	$run_menu)
+		$path/run-menu.sh
+	;;
+	$apps_menu)
+		$path/apps-menu.sh
+	;;
+	$ss_menu)
+		$path/ss-menu.sh
+	;;	
+	$power_menu)
+		$path/power-menu.sh
+	;;
+esac

@@ -1,0 +1,134 @@
+set repeat_current=true
+set replaygain=disabled
+set replaygain=
+set repeat_current=false
+set replaygain=track
+set replaygain=track-preferred
+set replaygain=3
+set replaygain=2
+set replaygain=1
+set replaygain=enable
+set repeat=true
+bind -f common C toggle continue
+bind -f common | toggle continue
+bind -f common Z toggle continue
+bind -f common W toggle continue
+bind -f common w toggle continue
+bind -f common t toggle continue
+bind -f common ñ toggle continue
+bind -f common space toggle continue
+bind -f common  toggle continue
+bind -f browser C win-activate
+set tree_width_percent=27
+set format_current= %a - %t
+set format_current= %a - %t%= %y 
+set format_current= %a -%3n. %t%= %y 
+set format_current= %l -%3n. %t%= %y 
+set format_title=%a - %l
+set format_title=%a - %l - %t 
+set format_statusline= %{status} %{?show_playback_position?%{position} %{?duration?/ %{duration} }?%{?duration?%{duration} }} %{?volume>=0?vol: %{?lvolume!=rvolume?%{lvolume},%{rvolume} ?%{volume} }}%{?stream?buf: %{buffer} }%{?show_current_bitrate & bitrate>=0? %{bitrate} kbps }%=%{?repeat_current?repeat current?%{?play_library?%{playlist_mode} from %{?play_sorted?sorted }library?playlist}} | %1{continue}%1{follow}%1{repeat}%1{shuffle} 
+set format_statusline= %{status} %{?show_playback_position?%{position} %{?duration?/ %{duration} }?%{?duration?%{duration} }} }%{?volume>=0?vol: %{?lvolume!=rvolume?%{lvolume},%{rvolume} ?%{volume} }}%{?stream?buf: %{buffer} }%{?show_current_bitrate & bitrate>=0? %{bitrate} kbps }%=%{?repeat_current?repeat current?%{?play_library?%{playlist_mode} from %{?play_sorted?sorted }library?playlist}} | %1{continue}%1{follow}%1{repeat}%1{shuffle} 
+set format_statusline= %{status} %{?show_playback_position?%{position} %{?duration?/ %{duration} }?%{?duration?%{duration} }}- %{total} %{?bpm>0?at %{bpm} BPM }%{?volume>=0?vol: %{?lvolume!=rvolume?%{lvolume},%{rvolume} ?%{volume} }}%{?stream?buf: %{buffer} }%{?show_current_bitrate & bitrate>=0? %{bitrate} kbps }%=%{?repeat_current?repeat current?%{?play_library?%{playlist_mode} from %{?play_sorted?sorted }library?playlist}} | %1{continue}%1{follow}%1{repeat}%1{shuffle} 
+set format_statusline= %{status} %{?show_playback_position?%{position} %{?duration? / %{duration} }?%{?duration?%{duration} }}- %{total} %{?bpm>0?at %{bpm} BPM }%{?volume>=0?vol: %{?lvolume!=rvolume?%{lvolume},%{rvolume} ?%{volume} }}%{?stream?buf: %{buffer} }%{?show_current_bitrate & bitrate>=0? %{bitrate} kbps }%=%{?repeat_current?repeat current?%{?play_library?%{playlist_mode} from %{?play_sorted?sorted }library?playlist}} | %1{continue}%1{follow}%1{repeat}%1{shuffle} 
+set format_statusline= %{status} %{?show_playback_position?%{position} %{?duration? || %{duration} }?%{?duration?%{duration} }}- %{total} %{?bpm>0?at %{bpm} BPM }%{?volume>=0?vol: %{?lvolume!=rvolume?%{lvolume},%{rvolume} ?%{volume} }}%{?stream?buf: %{buffer} }%{?show_current_bitrate & bitrate>=0? %{bitrate} kbps }%=%{?repeat_current?repeat current?%{?play_library?%{playlist_mode} from %{?play_sorted?sorted }library?playlist}} | %1{continue}%1{follow}%1{repeat}%1{shuffle} 
+set tree_width_percent=38
+set tree_width_max=0
+set tree_width_max=60
+set tree_width_max=40
+set tree_width_max=30
+set tree_width_percent=34
+set tree_width_percent=0
+set tree_width_max=32
+set tree_width_max=20
+set stop_after_queue=false
+set status_display_program=
+set status_display_program=1
+set status_display_program=3
+set start_view=tree
+set start_view=3
+set start_view=1
+set start_view=2
+set start_view=two
+set start_view=
+set tree_width_percent=28
+set tree_width_percent=32
+set tree_width_percent=10
+set resume=true
+set lib_sort=albumartist date album discnumber tracknumber title filename
+set mouse=true
+set format_title=%a - %l - %t (%y)
+set format_title=%a - %l - %t
+set format_trackwin=%3n. %t %d
+set format_trackwin=%3n. %t= %d
+set format_trackwin=%3n
+set format_trackwin=%3n. %t= %y %d
+set format_trackwin=%3n. %t%= %d 
+set format_trackwin=%3n. %t%= %y %d 
+set format_trackwin=%3n. %t% = %d 
+set display_artist_sort_name=false
+set display_artist_sort_name=true
+set color_win_title_fg=red
+set color_win_title_fg=white
+set color_win_cur_sel_bg=red
+set color_trackwin_album_fg=white
+set color_trackwin_album_fg=lightyellow
+set color_win_title_attr=default
+set color_win_title_bg=default
+set color_win_title_bg=red
+set color_win_title_bg=lightred
+set color_win_title_fg=lightyellow
+set color_win_sel_fg=black
+set color_win_sel_bg=red
+set color_win_inactive_sel_fg=white
+set color_win_inactive_sel_bg=default
+set color_win_inactive_sel_bg=red
+set color_win_inactive_cur_sel_bg=default
+set color_win_dir=white
+set color_win_dir=red
+set color_win_cur_sel_fg=black
+set color_win_cur=lightyellow
+set color_win_cur=red
+set color_win_cur=white
+set color_trackwin_album_bg=default
+set color_titleline_fg=black
+set color_titleline_bg=red
+set color_titleline_fg=white
+set color_titleline_bg=default
+set color_statusline_bg=default
+set color_statusline_fg=white
+set color_statusline_fg=black
+set color_statusline_bg=gray
+set color_statusline_bg=lightyellow
+set color_cmdline_bg=default
+set color_cmdline_fg=default
+set color_win_bg=default
+set color_win_bg=red
+set color_statusline_bg=black
+set color_cmdline_bg=black
+set color_win_fg=white
+set color_win_fg=red
+set color_win_bg=black
+set color_win_bg=green
+set color_win_bg=balck
+set color_win_bg=gray
+set color_win_bg=magenta
+set color_win_fg=black
+set color_trackwin_album_bg=red
+set color_win_attr=red
+set color_separator=red
+set color_trackwin_album_fg=red
+set color_trackwin_album_fg=black
+set color_trackwin_album_attr=regular
+set color_trackwin_album_attr=bold
+set color_trackwin_album_attr=light
+set color_titleline_bg=magenta
+set color_statusline_bg=1
+set color_statusline_bg=00
+set color_titleline_attr=
+set color_statusline_attr=blue
+set color_statusline_attr=red
+set color_separator=blue
+set color_separator=magenta
+set color_separator=purple
+set color_separator=#bf616a
+add ~/Música/

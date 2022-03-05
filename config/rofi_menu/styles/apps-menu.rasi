@@ -1,0 +1,70 @@
+/* Power Menu Style */
+
+@import "colors.rasi"
+
+configuration{
+	hover-select:           true;
+	me-accept-entry: 		[MousePrimary,MouseDPrimary,MouseSecondary];
+	me-select-entry: 		"";
+	show-icons:				true;
+	display-drun:			"";
+}
+* {
+	font:					@font-main;
+	background-color:		@background; 
+}
+window {
+	width:					650px;
+	height:					500px;
+	location:				center;
+	border:					4px;
+	border-color:			@purple;
+	border-radius:			8px;
+}
+prompt {
+	background-color: 		@purple;
+	text-color:				@black;
+	padding:				8px 22px 8px 16px;
+
+}
+entry {
+	enabled:				true;
+	font:					"Iosevka Medium 17";
+	text-color:				@foreground;
+	padding:				8px 0px 8px 16px;
+	border-radius:			8px;
+	border:					4px;
+	border-color:			@purple;
+}
+inputbar {
+	children: 				[ prompt, entry ];
+	background-color: 		@purple;
+	padding:				0px 0px 0px 0px;
+}
+element selected {
+	background-color:		@purple;
+	border-radius:			8px;
+}
+element-text selected {
+	background-color:		@purple;
+	text-color:				@black;
+}
+element-text {
+	text-color:				@foreground;
+	font:					"Iosevka Medium 16";
+	padding:				9px 0px 5px 15px;		
+}
+element-icon {
+  margin: 6px 0px 6px 10px;
+  size:	32px;
+  background-color:	transparent;
+}
+listview{
+	scrollbar: 		true;
+	spacing:		15px;
+	dynamic:		true;
+	cycle:			true;
+	layout:			vertical;
+	columns:		1;
+    padding:    15px 0px 0px 15px;
+}

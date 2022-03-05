@@ -1,0 +1,79 @@
+ /* Applications Launcher Theme */
+ @import "colors.rasi"
+configuration {
+	display-drun:			"Buscar:";
+	show-icons:				true;
+	icon-theme:				"Papirus";
+	drun-display-format:	"{name}";
+	hide-scrollbar:			true;
+	sidebar-mode:			false;
+ 	hover-select:           true;
+ 	me-accept-entry: "MousePrimary";
+ 	me-select-entry: "";
+}
+* {
+	fullscreen: 			true;
+	background-color:		transparent;
+	text-color:				@foreground;
+	highlight: 		bold;
+    font:           @font-alt;
+}
+window{
+	width:		100%;
+	hight:		100%;
+	font:		@font-alt;
+}
+mainbox {
+	padding: 5% 15% 0% 15%;
+	spacing: 20px 20px;
+ 	border: 0px;
+ 	background-color: @background;
+}
+prompt{
+	enabled:		true;
+	font:			@font-alt;
+	background-color:	@purple;
+	text-color:			@black-alt;
+	padding: 15px 5px 15px 5px;
+	margin: 0px 10px 0px 0px;
+	border-radius: 8px;
+}
+entry {
+	enabled:		true;
+	font:			@font-alt;
+	background-color:	@black;
+	text-color:		@foreground;
+	padding: 14px 15px 0px 15px;
+	border-radius: 8px;
+}
+inputbar{
+	children: 		[ prompt, entry];
+	padding: 0px 15px 0px 0px;
+}
+listview{
+	scrollbar: 		true;
+	spacing:		5px;
+	dynamic:		false;
+	cycle:			true;
+	layout:			vertical;
+	columns:		1;
+    padding:    5px 0px 0px 0px;
+}
+element {
+	padding: 	20px 0px 10px 10px;
+}
+element selected {
+	background-color: 	@purple;
+	border-radius:		8px;
+}
+element-text {
+    padding:   -4px 0px 0px 0px;
+}
+element-text.selected {
+	background-color: 	@purple;
+	text-color: 		@black-alt;
+}
+element-icon {
+  margin: -8px 25px 0px 15px;
+  size:	40px;
+}

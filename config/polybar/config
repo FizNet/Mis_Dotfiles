@@ -1,0 +1,195 @@
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;==========================================================
+
+[colors]
+ 
+black      = #1c1f26
+gray       = #a9b1d6
+red        = #e6778d
+green      = #60bfa7
+yellow     = #ffcb6b
+blue       = #7aa2f7
+white      = #c0c5ff
+pink       = #FF9cac
+background = #12141c
+foreground = ${colors.white}
+
+[bar/main]
+;monitor = ${env:MONITOR:HDMI-1}
+width = 1352
+height = 32
+bottom = false
+offset-x = 6px
+offset-y = 4px
+radius = 6
+fixed-center = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+line-size = 2
+border-size = 0
+border-color = ${colors.blue}
+padding-left = 1
+padding-right = 0
+module-margin-left = 0
+module-margin-right = 1
+font-0 = MesloLGS NF:size=13;2
+font-1 = FiraCode Nerd Font:size=12;2
+font-2 = MesloLGS NF:size=16;2
+font-3 = MesloLGS NF:size=10;2
+font-4 = FiraCode Nerd Font:size=12;2
+font-5 = MesloLGS NF:size=17;4
+modules-left = bri sep
+modules-center = bspwm 
+modules-right = audio brillo bateria wlan date
+;;tray-position = center
+;;tray-padding = 2
+;;tray-background = #0063ff
+wm-restack = bspwm
+;override-redirect = true
+scroll-up = brightnessctl s 20+
+scroll-down = brightnessctl s 20-
+[module/bspwm]
+type                     = internal/bspwm
+label-focused            = "  "
+label-focused-background = ${colors.background}
+label-focused-foreground = ${colors.blue}
+label-focused-padding    = 0
+label-focused-underline  = ${colors.blue} 
+label-occupied           = "  "
+label-occupied-padding   = 0
+label-empty              = "  "
+label-empty-foreground   = ${colors.foreground}
+label-empty-padding      = 0
+label-font = 1
+[module/bri]
+type = custom/text
+content = ""
+content-font = 6
+content-foreground = ${colors.blue}
+click-left = $HOME/.config/rofi/launch.sh main_menu
+[module/sep]
+type = custom/text
+content = "│"
+content-font = 6
+content-foreground = ${colors.blue}
+[module/brillo]
+type = internal/backlight
+card = intel_backlight
+use-actual-brightness = true
+format = <ramp><label>
+label = " %percentage%% "
+format-underline = ${colors.yellow}
+ramp-0 = " %{T3}%{T2}"
+ramp-1 = " %{T3}%{T2}"
+ramp-2 = " %{T3}%{T2}"
+ramp-3 = " %{T3}%{T2}"
+ramp-4 = " %{T3}%{T2}"
+ramp-foreground = ${colors.yellow}
+
+
+[module/wlan]
+type = internal/network
+interface = wlan0
+interval = 3.0
+format-connected = <label-connected>
+format-connected-foreground = ${colors.pink}
+label-connected = "  "
+format-connected-underline = ${colors.pink}
+format-disconnected = <label-disconnected>
+label-disconnected = " %{T2}  "
+format-font = 1 
+format-disconnected-underline = ${colors.red} 
+label-disconnected-foreground = ${colors.red}
+[module/date]
+type = internal/date
+interval = 5
+time = %H:%M-%d 
+label = "  %time% "
+label-font = 2
+label-background = ${colors.blue}
+label-foreground = ${colors.background}
+[module/audio]
+type = internal/pulseaudio
+format-volume = <ramp-volume> <label-volume>
+label-volume = "%percentage%% "
+label-volume-foreground = ${colors.foreground}
+format-volume-underline = ${colors.red}
+ramp-volume-0 = " %{T1}%{T2}"
+ramp-volume-foreground = ${colors.red}
+format-muted = <label-muted>
+format-muted-underline = ${colors.red}
+format-muted-prefix = " %{T1} %{T2}"
+format-muted-prefix-foreground = ${colors.red}
+label-muted = "mut "
+format-volume-font = 2 
+[module/bateria]
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 99
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+format-full-prefix = " %{T4} %{T5}"
+format-full-underline = ${colors.green}
+format-full-prefix-foreground = ${colors.green}
+ramp-capacity-0 = " %{T4}!%{T5}" 
+ramp-capacity-1 = " %{T4}%{T5}" 
+ramp-capacity-2 = " %{T4}%{T5}" 
+ramp-capacity-3 = " %{T4}%{T5}" 
+ramp-capacity-4 = " %{T4}%{T5}" 
+ramp-capacity-5 = " %{T4}%{T5}" 
+ramp-capacity-6 = " %{T4}%{T5}"
+ramp-capacity-foreground = ${colors.green}
+label-discharging = "%percentage%% "
+;;ramp-capacity-underline = ${colors.green}
+format-discharging-underline = ${colors.green}
+format-charging-underline = ${colors.green}
+animation-charging-0 = " %{T3}%{T5}" 
+animation-charging-1 = " %{T3}%{T5}" 
+animation-charging-2 = " %{T3}%{T5}" 
+animation-charging-3 = " %{T3}%{T5}" 
+animation-charging-4 = " %{T3}%{T5}" 
+animation-charging-5 = " %{T3}%{T5}"
+animation-charging-foreground = ${colors.green}
+animation-charging-framerate = 600
+
+[module/powermenu]
+type = custom/menu
+
+;;   勒 痢 
+expand-right               = true
+format-spacing             = 1
+label-open                 = " " 
+label-open-foreground      = ${colors.red}
+label-close                = 
+label-close-foreground     = ${colors.foreground}
+label-separator            = |
+label-separator-foreground = ${colors.foreground}
+menu-0-0                   = 
+menu-0-0-exec              = bspc quit
+menu-0-1                   = 
+menu-0-1-exec              = rofi -show drun
+menu-0-2                   = "痢"
+menu-0-2-exec              = reboot
+menu-0-3                   = " "
+menu-0-3-exec              = poweroff
+menu-0-0-foreground        = ${colors.pink}
+menu-0-1-foreground        = ${colors.yellow}
+menu-0-2-foreground        = ${colors.blue}
+menu-0-3-foreground        = ${colors.red}
+
+
+[global/wm]
+margin-top = 3
+margin-bottom = 5
+
+; vim:ft=dosini

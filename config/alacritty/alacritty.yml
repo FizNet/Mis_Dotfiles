@@ -1,0 +1,63 @@
+font:
+  normal:
+    family: SFMono Nerd Font
+    style: Regular
+  bold:
+    family: SFMono Nerd Font
+    style: Semibold
+  italic:
+    #family: LiterationMono Nerd Font
+    family: SFMono Nerd Font
+    style: Italic
+  offset:
+    y: 0
+    x: 0
+  size: 11
+
+env:
+  TERM: xterm-256color
+window:
+  padding:
+    x: 0
+    y: 2
+  opacity: 0.89
+draw_bold_text_with_bright_colors: false
+selection:
+  save_to_clipboard: true
+key_bindings:
+-  { key: Up,  mods: Control|Shift,  action: ScrollLineUp }
+-  { key: Down,  mods: Control|Shift,  action: ScrollLineDown }
+-  { key: F11, action: ToggleFullScreen}
+-  { key: C, mods: Control|Shift, action: Copy}
+-  { key: V, mods: Control|Shift, action: Paste}
+cursor:
+  style: Block
+  style:
+    blinking: Always
+  blink_interval: 400
+colors:
+  cursor:
+    cursor: '#c0c5ff'
+  primary:
+    background: '#12141a'
+    foreground: '#c0c5ff'
+  normal:
+    black:   '#16161e'
+    #red:     '#e06c75'
+    red:     '#f46e88'
+    green:   '#73daca'
+    yellow:  '#FFCB6B'
+    blue:    '#7aa2f7'
+    magenta: '#bb9af7'
+    cyan:    '#7dcfff'
+    white:   '#c0c5ff'
+  bright:
+    black:   '#c0c5f5'
+    #red:     '#e06c75'
+    red:     '#f46e88'
+    green:   '#73daca'
+    yellow:  '#FFcb6b'
+    blue:    '#7aa2f7'
+    magenta: '#bb9af7'
+    cyan:    '#7dcfff'
+    white:   '#c0c5ff'

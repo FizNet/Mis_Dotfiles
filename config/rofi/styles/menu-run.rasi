@@ -1,0 +1,40 @@
+/* Lanzador */
+
+@import "colors.rasi"
+
+
+
+* {
+    background-color:   @background;
+    text-color:         @black;
+    font:               @font-alt;
+}
+
+window {
+    width:          100%;  
+    height:         100%;
+    padding:        30% 10% 5% 10%;
+    border-radius:  0px;
+    border:         0px;
+    border-color:   @background;
+    y-offset:    -50%;
+}
+inputbar {
+    background-color: @background;
+    padding:     20px -10px 20px 5px;
+    margin: 8%;
+    border: 10px;
+}
+entry {
+    background-color: @white;
+    padding: 20px 10px 20px 10px;
+    border-radius: 8px;
+}
+prompt {
+    font: @font-alt;
+    background-color: @yellow;
+    text-color: @black-alt;
+    padding: 20px 10px 20px 15px;
+    margin: 0px 15px 0px 0px;
+    border-radius: 8px;
+}

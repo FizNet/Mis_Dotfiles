@@ -1,0 +1,13 @@
+* {
+    font-main:      "Iosevka Medium 20";
+    foreground:     #c0c5ff;
+    background:     #12141d;
+    black-alt:      #1c1f26;
+    black:          #12141d;
+    white:          #c0c5ff;
+    purple:         #bc83e3;
+    red:            #f46e88;
+    green:          #49b8a5;
+    yellow:         #ffcb6b;
+    orange:         #de8f78;
+}
