@@ -20,6 +20,4 @@ Estos son mis archivos de configuracion
 
 - JetBrainsMono Nerd Font
 - FiraCode Nerd Font
-- [Liga SFMono Nerd Font] [1]
-[1]: https://github.com/shaunsingh/SFMono-Nerd-Font-Ligaturized.git
-
+- [Liga SFMono Nerd Font](https://github.com/shaunsingh/SFMono-Nerd-Font-Ligaturized.git)
